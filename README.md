@@ -34,13 +34,15 @@
 
 # Compiling and running `helloworld.c`
 ```bash
-make
-make run ARGS="arg0 arg1 arg2"
+make SOURCE="helloworld.c" TARGET="helloworld"
+make run TARGET="helloworld" ARGS="arg0 arg1 arg2"
+# Examples
+make run TARGET="helloworld" ARGS="--help"
+make run TARGET="helloworld" ARGS="-c 0x3"
 ```
 
-
-# Examples
+# Compiling and running `dump.c`
 ```bash
-make run ARGS="--help"
-make run ARGS="-c 0x3"
+make SOURCE="dump.c" TARGET="dump"
+make run TARGET="dump" ARGS="--vdev=net_tap0,iface=tap0"
 ```
