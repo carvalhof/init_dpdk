@@ -4,7 +4,7 @@
 set -e
 
 # Install pre-requisites.
-sudo apt install -y meson python3 python3-pip
+sudo apt install -y meson python3 python3-pip pkg-config
 pip3 install pyelftools
 
 # Download sources.
@@ -19,6 +19,6 @@ ninja -C build
 ninja -C build install
 
 # Set hugepages.
-echo 1024 | sudo tee /sys/devices/system/node/node*/hugepages/hugepages-2048kB/nr_hugepages
-mkdir -p /mnt/huge || true
-mount -t hugetlbfs -opagesize=2M nodev /mnt/huge
+echo 2048 | sudo tee /sys/devices/system/node/node*/hugepages/hugepages-2048kB/nr_hugepages
+sudo mkdir -p /mnt/huge || true
+sudo mount -t hugetlbfs -opagesize=2M nodev /mnt/huge
