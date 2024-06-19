@@ -20,12 +20,12 @@ INCFLAGS = $(foreach dir, $(INCLUDE_DIRS), -I$(dir))
 LDFLAGS = $(foreach dir, $(LIB_DIRS), -L$(dir))
 
 TARGET = helloworld
-SRCS = helloworld.c
+SOURCE = helloworld.c
 
 all: $(TARGET)
 
-$(TARGET): $(SRCS)
-	$(CC) $(CFLAGS) $(DPDK_CFLAGS) $(INCFLAGS) -o $(TARGET) $(SRCS) $(LDFLAGS) $(DPDK_LDFLAGS) $(LIBS)
+$(TARGET): $(SOURCE)
+	$(CC) $(CFLAGS) $(DPDK_CFLAGS) $(INCFLAGS) -o $(TARGET) $(SOURCE) $(LDFLAGS) $(DPDK_LDFLAGS) $(LIBS)
 
 clean:
 	rm -f $(TARGET)
