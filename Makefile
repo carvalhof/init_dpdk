@@ -25,15 +25,15 @@ SRCS = helloworld.c
 all: $(TARGET)
 
 $(TARGET): $(SRCS)
-        $(CC) $(CFLAGS) $(DPDK_CFLAGS) $(INCFLAGS) -o $(TARGET) $(SRCS) $(LDFLAGS) $(DPDK_LDFLAGS) $(LIBS)
+	$(CC) $(CFLAGS) $(DPDK_CFLAGS) $(INCFLAGS) -o $(TARGET) $(SRCS) $(LDFLAGS) $(DPDK_LDFLAGS) $(LIBS)
 
 clean:
-        rm -f $(TARGET)
+	rm -f $(TARGET)
 
 distclean: clean
-        rm -f *.o *~
+	rm -f *.o *~
 
 run: $(TARGET)
-        sudo -E LD_LIBRARY_PATH=$(DPDK_DIR):$$LD_LIBRARY_PATH ./$(TARGET) $(ARGS)
+	sudo -E LD_LIBRARY_PATH=$(DPDK_DIR):$$LD_LIBRARY_PATH ./$(TARGET) $(ARGS)
 
 .PHONY: all clean distclean run
