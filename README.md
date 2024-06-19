@@ -12,7 +12,7 @@
 - https://doc.dpdk.org/guides/prog_guide/index.html
 
 ## API
-- https://doc.dpdk.org/api-22.11/index.html
+- https://doc.dpdk.org/api-23.11/index.html
 
 ## Quick Start Guide
 - https://core.dpdk.org/doc/quick-start/
