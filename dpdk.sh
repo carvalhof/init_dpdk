@@ -8,9 +8,9 @@ sudo apt install -y meson python3 python3-pip pkg-config
 pip3 install pyelftools
 
 # Download sources.
-wget https://fast.dpdk.org/rel/dpdk-22.11.1.tar.xz
-tar -xvf dpdk-22.11.1.tar.xz
-cd dpdk-stable-22.11.1
+wget https://fast.dpdk.org/rel/dpdk-23.11.1.tar.xz
+tar -xvf dpdk-23.11.1.tar.xz
+cd dpdk-stable-23.11.1
 mkdir -p build
 
 # Build and install.
