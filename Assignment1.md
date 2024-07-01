@@ -46,7 +46,13 @@ Nesse exercício, você deve criar um arquivo DPDK `filter.c`, baseado no arquiv
 - \# 511-1023: 
 - \# \>1024:
 
-7. **BONUS: para cada caso positivo dos passos 1, 2, 3 e 4, colete o tempo (em us) do processamento. Ao final, apresente a média e o intervalo de confiança de 95\% de cada um dos casos.**
+7. Para todos os pacotes TCP e UDP, gerar estatística sobre as portas de origem e destino:
+- \# Lista das 10 principais portas de origem, com valores absolutos e percentuais
+- \# Lista das 10 principais portas de destino, com valores absolutos e percentuais
+- \# Lista dos 10 principais pares (porta de origem, porta de destino), com valores absolutos e percentuais
+- Importante! Gerar estatísticas separadas para TCP e UDP.
+
+9. Para cada caso positivo dos passos 1, 2, 3 e 4, colete o tempo (em us) do processamento de cada pacote. Ao final, apresente a média e o intervalo de confiança de 95\% de cada um dos casos.
 
 ## Importante:
 - *\<length\>*: Tamanho informado no cabeçalho IP;
@@ -94,4 +100,4 @@ sudo python3 inject.py tap0 file.pcap
 
 ## Arquivos `.pcap`
 
-- TBD
+- O arquivo .pcap que você deve analisará será oriundo da sua própria navegação cotidiana na Internet. Para isso, enquanto estiver utilizando a Internet em seu computador, deixe o tcpdump aberto e capturando pacotes da sua interface de rede. Ao configurar o tcpdump, não se esqueça de colocar a opção para exportar a saída para uma arquivo. Após ter gerado o arquivo .pcap, utilize-o como entrada para realizar a tarefa descrita acima. Certifique-se de ter um arquivo .pcap com pelo menos 50 MB de tamanho para processamento.
