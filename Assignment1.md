@@ -52,7 +52,7 @@ Nesse exercício, você deve criar um arquivo DPDK `filter.c`, baseado no arquiv
 - \# Lista dos 10 principais pares (porta de origem, porta de destino), com valores absolutos e percentuais
 - Importante! Gerar estatísticas separadas para TCP e UDP.
 
-9. Para cada caso positivo dos passos 1, 2, 3 e 4, colete o tempo (em us) do processamento de cada pacote. Ao final, apresente a média e o intervalo de confiança de 95\% de cada um dos casos.
+8. Para cada caso positivo dos passos 1, 2, 3 e 4, colete o tempo (em us) do processamento de cada pacote. Ao final, apresente a média e o intervalo de confiança de 95\% de cada um dos casos.
 
 ## Importante:
 - *\<length\>*: Tamanho informado no cabeçalho IP;
