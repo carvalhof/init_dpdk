@@ -46,3 +46,9 @@ make run TARGET="helloworld" ARGS="-c 0x3"
 make SOURCE="dump.c" TARGET="dump"
 make run TARGET="dump" ARGS="--vdev=net_tap0,iface=tap0"
 ```
+
+# Compiling and running `echo.c`
+```bash
+make SOURCE="echo.c" TARGET="echo"
+make run TARGET="echo" ARGS="--vdev=net_tap0,iface=tap0 --vdev=net_tap1,iface=tap1"
+```
