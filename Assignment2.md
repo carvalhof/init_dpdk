@@ -11,11 +11,14 @@ sudo tcpdump -i tap1 -w saida.pcap
 Durante o desenvolvimento desse exercício, você deve:
 
 1. Ler de um arquivo `filtro.txt` o filtro que deve ser implementado no programa `echo.c`
-    *  Neste primeiro momento, você deve ser capaz de ler o arquivo `filtro.txt` e filtrar:
-        * Pacotes TCP ou UDP;
-        * IP de origem ou IP de destino;
-        * Porta de origem ou porta de destino;
-    *  Se possível, utilizar a sintaxe do `tcpdump` (BPF filter)
+    *  A estrutura desse arquivo segue o seguinte formato:
+        ```
+        [TCP | UDP] [IP_origem | *]:[Porta_origem | *] [IP_destino | *]:[Porta_destino | *]
+        ```
+        * `|` significa **OU**
+        * `*` significa que pode ter qualquer valor (_wildcard_). 
+        * `[` e `]` não fazem parte da sintaxe.
+    *  O arquivo [exemplo.txt](.exemplo.txt) apresenta o exemplo de cinco filtros.
 
 2. Obter os dois arquivos pcap ao término da execução, a saber: `entrada.pcap` e `saida.pcap`
 
@@ -27,3 +30,5 @@ IP_origem:Porta_origem -> IP_destino:Porta_destino -- Protocol: <protocol> -- Le
 ```
 
 5. Observar atentamente os comentários dentro do arquivo `echo.c`
+
+6. Criar uma interface simples que configura as regras a serem filtradas e gerar o arquivo diretamente para executar seu programa DPDK.
