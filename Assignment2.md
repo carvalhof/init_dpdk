@@ -24,7 +24,7 @@ Durante o desenvolvimento desse exercício, você deve:
 
 3. Mostrar quantos pacotes foram filtrados
 
-4. Escrever em um arquivo 'filtrados.txt' apenas os pacotes que foram filtrados, na seguinte sintaxe:
+4. Escrever em um arquivo `filtrados.txt` cada pacote que foi filtrado, na seguinte sintaxe:
 ```
 IP_origem:Porta_origem -> IP_destino:Porta_destino -- Protocol: <protocol> -- Length: <length>
 ```
