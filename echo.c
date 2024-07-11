@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) {
 
         // TODO: filter all packets in 'pkts_burst'.
         // Be careful in 'rte_eth_tx_burst' arguments.
-        // Handing accordingly the 'pkt_burst' array.
+        // Handling accordingly the 'pkt_burst' array.
         // Make sure to free unsent packets.
 
         const uint16_t nb_tx = rte_eth_tx_burst(port_out, 0, pkts_burst, nb_rx);
