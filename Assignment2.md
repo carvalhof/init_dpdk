@@ -18,7 +18,7 @@ Durante o desenvolvimento desse exercício, você deve:
         * `|` significa **OU**
         * `*` significa que pode ter qualquer valor (_wildcard_). 
         * `[` e `]` não fazem parte da sintaxe.
-    *  O arquivo [exemplo.txt](.exemplo.txt) apresenta o exemplo de cinco filtros.
+    *  O arquivo [exemplo.txt](./exemplo.txt) apresenta o exemplo de cinco filtros.
 
 2. Obter os dois arquivos pcap ao término da execução, a saber: `entrada.pcap` e `saida.pcap`
 
