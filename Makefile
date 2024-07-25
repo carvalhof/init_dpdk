@@ -2,7 +2,7 @@
 
 CC = gcc
 LIBS =
-CFLAGS = -Wall -Wextra -Werror -pedantic -pedantic-errors \
+CFLAGS = -Wall -Wextra -Werror \
          -Wunused -Wuninitialized -Wfloat-equal -Wshadow \
          -O2 -fstack-protector-strong -fsanitize=address \
          -pthread

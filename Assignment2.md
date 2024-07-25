@@ -8,7 +8,7 @@ Você deve injetar os pacotes na interface **tap0** por meio do arquivo `.pcap` 
 sudo tcpdump -i tap1 -w saida.pcap
 ```
 
-Durante o desenvolvimento desse exercício, você deve:
+Durante o desenvolvimento deste exercício, você deve:
 
 1. Ler de um arquivo `filtro.txt` o filtro que deve ser implementado no programa `echo.c`
     *  A estrutura desse arquivo segue o seguinte formato:
